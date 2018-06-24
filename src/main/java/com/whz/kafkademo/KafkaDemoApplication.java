@@ -44,7 +44,7 @@ public class KafkaDemoApplication implements CommandLineRunner {
 
     @KafkaListener(topics = {"myTopic1", "myTopic2", "defaultTopic"})
     public void listen(ConsumerRecord<?, ?> cecord) throws Exception {
-        log.info(cecord.toString());
+        System.out.println(cecord.toString());
     }
 
     private static String readLine(final BufferedReader reader) throws IOException {
